@@ -1,0 +1,120 @@
+\chapter{正式开始}
+\section{本模板的结构}
+\subsection{封面}
+由命令$\backslash$maketitle 生成，具体内容在 data 目录下的 cover 文档中修改。
+
+一并由该目录生成的还有 声明及论文使用的授权 页。
+
+\subsection{目录}
+由命令$\backslash$tableofcontents 生成，在根目录 main 文档中，不建议做修改。
+
+\subsection{摘要}
+由命令$\backslash$cnabstract 和$\backslash$enabstract 生成，具体内容在 data 目录下的 abstract 文档中修改。
+
+\subsection{正文}
+本模板推荐将每个章节都写成一个 tex 文档且自定义命名（不用像本模板这样以 chapter1, chapter2 命名）并保存在 data 下，方便调整顺序以及用$\backslash$input 命令导入主文档。
+
+本模板的章节结构层次为$\backslash$chapter 章，$\backslash$section 节，$\backslash$subsection 目，$\backslash$subsubsection 条。
+
+\subsection{参考文献}
+由于国内杂乱的文献数据库，请自行手动编辑参考文献，具体要求略。
+
+\subsection{致谢}
+具体内容请在 data 目录下 thank 文档中更改。
+
+\subsection{附录}
+由命令$\backslash$appendix 生成，具体内容在 data 目录下的 appendix 文档中修改。
+
+\section{本模板自定义的命令}
+本模板自定义了一些命令以方便使用。
+
+\subsection{字体和字号}
+如\cref{zt}所示，
+\begin{longtable}{lr}	
+	\hline
+	 命令 & 效果\\
+	\hline
+	\endhead
+	\{$\backslash$rm 宋体 Times New Roman\} & {\rm 宋体 Times New Roman}\\
+	\{$\backslash$sf 黑体 Arial\} & {\sf 黑体 Arial}\\
+	\{$\backslash$song 宋体\} & {\song 宋体}\\
+	\{$\backslash$hei 黑体\} & {\hei 黑体}\\
+	\{$\backslash$kai 楷体\} & {\kai 楷体}\\
+	\{$\backslash$li 隶书\} & {\li 隶书}\\
+	\{$\backslash$fs 仿宋\} & {\fs 仿宋}\\ 
+	\{$\backslash$hwxw 华文新魏\} &{\hwxw 华文新魏}\\
+	\{$\backslash$qihao 七号\} & {\qihao 七号}\\
+	\{$\backslash$liuhao 六号\} & {\liuhao 六号}\\
+	\{$\backslash$xiaowuhao 小五号\} & {\xiaowuhao 小五号}\\
+	\{$\backslash$wuhao 五号\} & {\wuhao 五号}\\
+	\{$\backslash$xiaosihao 小四号\} & {\xiaosihao 小四号}\\
+	\{$\backslash$sihao 四号\} & {\sihao 四号}\\
+	\{$\backslash$xiaosanhao 小三号\} & {\xiaosanhao 小三号}\\
+	\{$\backslash$sanhao 三号\} & {\sanhao 三号}\\
+	\{$\backslash$xiaoerhao 小二号\} & {\xiaoerhao 小二号}\\
+	\{$\backslash$erhao 二号\} & {\erhao 二号}\\
+	\{$\backslash$xiaoyihao 小一号\} & {\xiaoyihao 小一号}\\
+	\{$\backslash$yihao 一号\} & {\yihao 一号}\\
+	\{$\backslash$xiaochuhao 小初号\} & {\xiaochuhao 小初号}\\
+	\{$\backslash$chuhao 初号\} & {\chuhao 初号} \\
+		\caption{命令对应的字体\label{zt}}
+\end{longtable}
+
+如果你有兴趣的话可以研究下字体，比如等宽字体，衬线字体什么的，很有意思的东西。
+
+\subsection{插入图片和表格}
+插入图片使用如下命令：
+\begin{spacing}{1.0}
+	\begin{verbatim}
+	\begin{figure}[htbp]
+	\centering\includegraphics[width=0.5/textwidth]{logo1.jpg}
+	\caption{插图示例}\label{fig.ex1}
+	\end{figure}
+	\end{verbatim}
+\end{spacing}
+\begin{figure}[htbp]
+	\centering\includegraphics[width=0.2\textwidth]{logo1.jpg}
+	\caption{插图示例}\label{fig.ex1}
+\end{figure}
+
+插入子图，效果如\cref{fig.ex2}所示。
+\begin{spacing}{1.0}
+	\begin{verbatim}
+	\begin{figure}[htbp]
+	\centering
+	\subfigure[校logo]{
+	\label{Fig.sub.1}
+	\includegraphics[width=0.2\textwidth]{logo1.jpg}}
+	\subfigure[校名]{
+	\label{Fig.sub.2}
+	\includegraphics[width=0.4\textwidth]{logo2.jpg}}
+	\caption{Logo样张}
+	\label{Fig.lable}
+	\end{figure}
+	\end{verbatim}
+\end{spacing}
+\begin{figure}[htbp]
+	\centering
+	\subfigure[校logo]{
+		\label{Fig.sub.1}
+		\includegraphics[width=0.2\textwidth]{logo1.jpg}}
+	\subfigure[校名]{
+		\label{Fig.sub.2}
+		\includegraphics[width=0.4\textwidth]{logo2.jpg}}
+	\caption{Logo样张}
+	\label{fig.ex2}
+\end{figure}
+插入表格用如下代码:
+\begin{spacing}{1.0}
+	\begin{verbatim}
+	\begin{longtable}{lr}
+	\hline
+	1& 2
+	\endhead
+	1&2
+	\end{longtable
+	\end{verbatim}
+\end{spacing}
+
+
+
