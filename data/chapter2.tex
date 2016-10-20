@@ -57,42 +57,27 @@
 	\{$\backslash$yihao 一号\} & {\yihao 一号}\\
 	\{$\backslash$xiaochuhao 小初号\} & {\xiaochuhao 小初号}\\
 	\{$\backslash$chuhao 初号\} & {\chuhao 初号} \\
-		\caption{命令对应的字体\label{zt}}
+	\caption{命令对应的字体\label{zt}}
 \end{longtable}
 
 如果你有兴趣的话可以研究下字体，比如等宽字体，衬线字体什么的，很有意思的东西。
 
+\subsection{注释和引用}
+使用命令 $\backslash$footnote{解释内容} 添加注释，本模板一页能标记9个注释且每页刷新序号\footnote{这里是解释内容}。
+
+使用命令 $\backslash$label{标记，自定义名字}\footnote{用自己定义的好记得名字或者缩写，尽量别用数字，会乱的，可以看本模板的源代码学习}标记图、表和公式的名字，再使用命令 $\backslash$cref{标记，自定义名字} 来引用。这个做法的好处是，全自动生成图、表和公式的序号，无需人为添加和修改。
+
+使用命令 $\backslash$cite{文献标记} 来引用文献，如\cite{yfbt}.
+
 \subsection{插入图片和表格}
-插入图片使用如下命令：
-\begin{spacing}{1.0}
-	\begin{verbatim}
-	\begin{figure}[htbp]
-	\centering\includegraphics[width=0.5/textwidth]{logo1.jpg}
-	\caption{插图示例}\label{fig.ex1}
-	\end{figure}
-	\end{verbatim}
-\end{spacing}
+请打开本手册的源代码查看。
+插入图片如\cref{fig.ex1}。
 \begin{figure}[htbp]
 	\centering\includegraphics[width=0.2\textwidth]{logo1.jpg}
 	\caption{插图示例}\label{fig.ex1}
 \end{figure}
 
 插入子图，效果如\cref{fig.ex2}所示。
-\begin{spacing}{1.0}
-	\begin{verbatim}
-	\begin{figure}[htbp]
-	\centering
-	\subfigure[校logo]{
-	\label{Fig.sub.1}
-	\includegraphics[width=0.2\textwidth]{logo1.jpg}}
-	\subfigure[校名]{
-	\label{Fig.sub.2}
-	\includegraphics[width=0.4\textwidth]{logo2.jpg}}
-	\caption{Logo样张}
-	\label{Fig.lable}
-	\end{figure}
-	\end{verbatim}
-\end{spacing}
 \begin{figure}[htbp]
 	\centering
 	\subfigure[校logo]{
@@ -104,17 +89,26 @@
 	\caption{Logo样张}
 	\label{fig.ex2}
 \end{figure}
-插入表格用如下代码:
-\begin{spacing}{1.0}
-	\begin{verbatim}
-	\begin{longtable}{lr}
+
+示例表格如\cref{bg}:
+\begin{longtable}{|c|c|c|c|c|}	
 	\hline
-	1& 2
+	项目1 & 项目2 & 项目3 & 项目4 & 项目5 \\
+	\hline
 	\endhead
-	1&2
-	\end{longtable
-	\end{verbatim}
-\end{spacing}
+    元素1 & 元素2 & 元素3 & 元素4 & 元素5 \\
+    \hline
+    元素6 & 元素7 & 元素8 & 元素9 & 元素10 \\
+    \hline
+    元素11 & 元素12 & 元素13 & 元素14 & 元素15 \\
+    \hline
+	\caption{示例表格\label{bg}}
+\end{longtable}
+
+表格的制作也是一本学问，其他样式请善用Google, 百度学习。
+
+\section{注意}
+\LaTeX 在编译过程中是区分大小写的！
 
 
 
