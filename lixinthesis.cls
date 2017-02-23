@@ -68,11 +68,11 @@
 \end{figure}
 \vspace{-0.08cm}
 \begin{center}
-\includegraphics[width=12.31cm]{logo2.jpg}
+\includegraphics[width=13.55cm]{logo2.jpg}  %12.31 老封面
 
 \vspace{0.23cm}
 
-{\erhao\rm Shanghai Lixin University of Commerce}
+{\erhaonew\rm Shanghai Lixin University of Accounting and Finance} %Shanghai Lixin University of Commerce 二号
 
 \vspace{0.51cm}
 
@@ -213,6 +213,7 @@
 %六号  
 \newcommand{\qihao}{\fontsize{5.5pt}{\baselineskip}\selectfont}    
 %七号
+\newcommand{\erhaonew}{\fontsize{20pt}{\baselineskip}\selectfont} 
 %------------------------------------------------------------------------
 % Times New Roman
 \setromanfont[BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf,]{times.ttf}
