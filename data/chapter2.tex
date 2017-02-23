@@ -30,11 +30,19 @@
 
 \subsection{字体和字号}
 如\cref{zt}所示，
-\begin{longtable}{lr}	
+    
+\begin{longtable}{lr}
+	\caption{命令对应的字体\label{zt}}\\
 	\hline
 	 命令 & 效果\\
 	\hline
-	\endhead
+	\endfirsthead %定义第一页表头
+	\hline
+	 命令 & 效果\\
+	\hline
+	\endhead %定义每一页表头
+	\hline   %定义分页处横线
+	\endfoot %定义分页处横线
 	\{$\backslash$rm 宋体 Times New Roman\} & {\rm 宋体 Times New Roman}\\
 	\{$\backslash$sf 黑体 Arial\} & {\sf 黑体 Arial}\\
 	\{$\backslash$song 宋体\} & {\song 宋体}\\
@@ -57,7 +65,7 @@
 	\{$\backslash$yihao 一号\} & {\yihao 一号}\\
 	\{$\backslash$xiaochuhao 小初号\} & {\xiaochuhao 小初号}\\
 	\{$\backslash$chuhao 初号\} & {\chuhao 初号} \\
-	\caption{命令对应的字体\label{zt}}
+	\hline
 \end{longtable}
 
 如果你有兴趣的话可以研究下字体，比如等宽字体，衬线字体什么的，很有意思的东西。
