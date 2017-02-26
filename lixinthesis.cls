@@ -6,6 +6,14 @@
 %----------------------------------------------------------------------
 %所用到的宏包
 \usepackage{xeCJK}
+\usepackage{hyperref} %pdf书签
+\hypersetup{CJKbookmarks,%
+	bookmarksnumbered,%
+	colorlinks,%
+	linkcolor=black,%
+	citecolor=black,%
+	plainpages=false,%
+	pdfstartview=FitH}
 \usepackage{zhnumber}
 \usepackage{latexsym}
 \usepackage{amsmath}
