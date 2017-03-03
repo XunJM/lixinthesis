@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lixinthesis}
-[2017/2/24 v1.1-beta A thesis templat for lixin undergraduates.]
+[2017/03/03 v1.3 A thesis templat for lixin undergraduates.]
 
 \LoadClass[12pt,a4paper]{report}
 %----------------------------------------------------------------------
@@ -94,7 +94,9 @@
 
 {\xiaosanhao\sf \LXAF@value@engtitle}
 \end{center}
-\vspace{1cm}
+
+\vfill
+%\vspace{1cm}
 
 \hspace{2.53cm}{\sanhao\kai 学生姓名~~\underline{\makebox[4.52cm]{\LXAF@value@author}}}
 
@@ -122,6 +124,10 @@
 \begin{center}
 {\xiaosanhao\song \today}
 \end{center}
+
+\vspace{0.3cm}
+
+~
 
 \clearpage
 
@@ -297,7 +303,7 @@
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \lhead{}
-\chead{\xiaowuhao\song 上海立信会计学院本科生毕业论文}
+\chead{\xiaowuhao\song 上海立信会计金融学院本科生毕业论文}
 \rhead[]
 \lfoot{}
 \cfoot{\xiaowuhao\rm\thepage}
