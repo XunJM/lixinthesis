@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lixinthesis}
-[2017/03/04 v1.4 A thesis templat for lixin undergraduates.]
+[2017/03/04 v1.3 A thesis templat for lixin undergraduates.]
 
 \LoadClass[12pt,a4paper]{report}
 %----------------------------------------------------------------------
