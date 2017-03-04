@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lixinthesis}
-[2017/03/03 v1.3 A thesis templat for lixin undergraduates.]
+[2017/03/04 v1.4 A thesis templat for lixin undergraduates.]
 
 \LoadClass[12pt,a4paper]{report}
 %----------------------------------------------------------------------
@@ -282,10 +282,10 @@
 \renewcommand{\bibname}{\centerline{参考文献}}
 \renewcommand\figurename{\rm\xiaosihao 图}
 \renewcommand\tablename{\rm\xiaosihao 表}
-\renewcommand{\theequation}{(\thechapter-\arabic{equation})}
+\renewcommand{\theequation}{\thechapter-\arabic{equation}}
 \renewcommand{\thefigure}{(\thechapter-\arabic{figure})}
 \renewcommand{\thetable}{(\thechapter-\arabic{table})}
-\crefname{equtation}{式}{}
+\crefname{equation}{式}{}
 \crefname{table}{表}{}
 \crefname{figure}{图}{}
 \newcommand{\enabstractname}{Abstract}

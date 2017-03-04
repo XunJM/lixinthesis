@@ -71,11 +71,19 @@
 如果你有兴趣的话可以研究下字体，比如等宽字体，衬线字体什么的，很有意思的东西。
 
 \subsection{注释和引用}
-使用命令 $\backslash$footnote{解释内容} 添加注释，本模板一页能标记9个注释且每页刷新序号\footnote{这里是解释内容}。
+使用命令 $\backslash$footnote\{解释内容\} 添加注释，本模板一页能标记9个注释且每页刷新序号\footnote{这里是解释内容}。
 
-使用命令 $\backslash$label{标记，自定义名字}\footnote{用自己定义的好记得名字或者缩写，尽量别用数字，会乱的，可以看本模板的源代码学习}标记图、表和公式的名字，再使用命令 $\backslash$cref{标记，自定义名字} 来引用。这个做法的好处是，全自动生成图、表和公式的序号，无需人为添加和修改。
+使用命令 $\backslash$label\{标记\}\footnote{用自己定义的好记得名字或者缩写，尽量别用数字，会乱的，可以看本模板的源代码学习}标记图、表和公式的名字，再使用命令 $\backslash$cref\{标记\} 来引用。这个做法的好处是，全自动生成图、表和公式的序号，无需人为添加和修改。
 
-使用命令 $\backslash$cite{文献标记} 来引用文献，如\cite{yfbt}.
+注意，$\backslash$cref命令对eqnarray环境的支持不好\footnote{详见cleveref宏包说明文档}，多行公式请使用align环境而避免使用eqnarray环境\footnote{详见 Lars Madsen 在2006年发表的 \emph{Avoid eqnarray!} }。
+
+如\cref{eq1}和\cref{eq2}：
+\begin{align}
+1=0\label{eq1}\\
+0=1\label{eq2}
+\end{align}
+
+使用命令 $\backslash$cite\{文献标记\} 来引用文献，如\cite{yfbt}.
 
 \subsection{插入图片和表格}
 请打开本手册的源代码查看。
