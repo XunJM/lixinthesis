@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lixinthesis}
-[2017/03/04 v1.3 A thesis templat for lixin undergraduates.]
+[2017/03/12 v1.4 A thesis templat for lixin undergraduates.]
 
 \LoadClass[12pt,a4paper]{report}
 %----------------------------------------------------------------------
@@ -34,6 +34,8 @@
 \usepackage{longtable}
 \usepackage{lmodern}
 \usepackage{cleveref}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\small, language=C,numbers=left,breaklines=true}
 %----------------------------------------------------------------------
 %这段用于宏包设置注释格式
 \usepackage[perpage,stable]{footmisc}

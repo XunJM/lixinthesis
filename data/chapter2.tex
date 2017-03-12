@@ -42,7 +42,7 @@
 	\hline
 	\endhead %定义每一页表头
 	\hline   %定义分页处横线 如果没有分页最好可以将该命令去除
-	\endfoot %定义分页处横线
+	\endfoot %定义分页处横线 如果没有分页最好可以将该命令去除
 	\{$\backslash$rm 宋体 Times New Roman\} & {\rm 宋体 Times New Roman}\\
 	\{$\backslash$sf 黑体 Arial\} & {\sf 黑体 Arial}\\
 	\{$\backslash$song 宋体\} & {\song 宋体}\\
@@ -107,7 +107,8 @@
 \end{figure}
 
 示例表格如\cref{bg}:
-\begin{longtable}{|c|c|c|c|c|}	
+\begin{longtable}{|c|c|c|c|c|}
+	\caption{示例表格\label{bg}}\\
 	\hline
 	项目1 & 项目2 & 项目3 & 项目4 & 项目5 \\
 	\hline
@@ -118,11 +119,34 @@
     \hline
     元素11 & 元素12 & 元素13 & 元素14 & 元素15 \\
     \hline
-	\caption{示例表格\label{bg}}
 \end{longtable}
 
 表格的制作也是一本学问，其他样式请善用Google, 百度学习。
 
+\subsection{关于 verbatim 环境}
+verbatim 环境就是要保持一切的原貌包括换行符，如果原来没有，它也不会替你加上。所以在遇到较长的代码时，推荐使用 lstlisting 环境。效果如下所示。
+
+verbatim 环境:
+\begin{verbatim}
+>> fzero(@(beta)(500000*(1+beta)^(25*12)*beta)/((1+ beta)^(25*12)-1)-2864.98,0.01)
+
+ans =
+
+0.0040
+
+if else
+\end{verbatim}
+
+lstlisting 环境
+\begin{lstlisting}
+>> fzero(@(beta)(500000*(1+beta)^(25*12)*beta)/((1+ beta)^(25*12)-1)-2864.98,0.01)
+
+ans =
+
+0.0040
+
+if else
+\end{lstlisting}
 \section{注意}
 \LaTeX 在编译过程中是区分大小写的！
 
