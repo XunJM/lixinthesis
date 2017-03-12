@@ -41,8 +41,8 @@
 	 命令 & 效果\\
 	\hline
 	\endhead %定义每一页表头
-	\hline   %定义分页处横线 如果没有分页最好可以将该命令去除
-	\endfoot %定义分页处横线 如果没有分页最好可以将该命令去除
+	\hline   %定义表尾横线
+	\endfoot %定义每一页表尾
 	\{$\backslash$rm 宋体 Times New Roman\} & {\rm 宋体 Times New Roman}\\
 	\{$\backslash$sf 黑体 Arial\} & {\sf 黑体 Arial}\\
 	\{$\backslash$song 宋体\} & {\song 宋体}\\
@@ -65,7 +65,6 @@
 	\{$\backslash$yihao 一号\} & {\yihao 一号}\\
 	\{$\backslash$xiaochuhao 小初号\} & {\xiaochuhao 小初号}\\
 	\{$\backslash$chuhao 初号\} & {\chuhao 初号} \\
-	\hline
 \end{longtable}
 
 如果你有兴趣的话可以研究下字体，比如等宽字体，衬线字体什么的，很有意思的东西。
@@ -109,16 +108,21 @@
 示例表格如\cref{bg}:
 \begin{longtable}{|c|c|c|c|c|}
 	\caption{示例表格\label{bg}}\\
+    \hline
+    项目1 & 项目2 & 项目3 & 项目4 & 项目5 \\
+	\hline
+	\endfirsthead %定义第一页表头
 	\hline
 	项目1 & 项目2 & 项目3 & 项目4 & 项目5 \\
 	\hline
-	\endhead
+	\endhead %定义每一页表头
+	\hline   %定义表尾横线
+	\endfoot %定义每一页表尾
     元素1 & 元素2 & 元素3 & 元素4 & 元素5 \\
     \hline
     元素6 & 元素7 & 元素8 & 元素9 & 元素10 \\
     \hline
     元素11 & 元素12 & 元素13 & 元素14 & 元素15 \\
-    \hline
 \end{longtable}
 
 表格的制作也是一本学问，其他样式请善用Google, 百度学习。
