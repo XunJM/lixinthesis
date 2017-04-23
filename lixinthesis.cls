@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{lixinthesis}
-[2017/03/12 v1.4 A thesis templat for lixin undergraduates.]
+[2017/4/23 v1.5 A thesis templat for lixin undergraduates.]
 
 \LoadClass[12pt,a4paper]{report}
 %----------------------------------------------------------------------
@@ -31,11 +31,14 @@
 \usepackage{appendix}
 \usepackage{pifont}
 \usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{makecell}
 \usepackage{longtable}
 \usepackage{lmodern}
 \usepackage{cleveref}
 \usepackage{listings}
-\lstset{basicstyle=\ttfamily\small, language=C,numbers=left,breaklines=true}
+\lstset{basicstyle=\ttfamily\small, language=[LaTeX]TeX,numbers=left,breaklines=true}
 %----------------------------------------------------------------------
 %这段用于宏包设置注释格式
 \usepackage[perpage,stable]{footmisc}
@@ -100,29 +103,30 @@
 \vfill
 %\vspace{1cm}
 
-\hspace{2.53cm}{\sanhao\kai 学生姓名~~\underline{\makebox[4.52cm]{\LXAF@value@author}}}
+\hspace{2.53cm}{\xiaosanhao\song 学生姓名~~\underline{\makebox[4.52cm]{\LXAF@value@author}}}
 
 \vspace{0.28cm}
 
-\hspace{2.53cm}{\sanhao\kai 指导教师~~\underline{\makebox[4.52cm]{\LXAF@value@advisor}}}
+\hspace{2.53cm}{\xiaosanhao\song 指导教师~~\underline{\makebox[4.52cm]{\LXAF@value@advisor}}}
 
 \vspace{0.31cm}
 
-\hspace{2.53cm}{\sanhao\kai 论文类别~~\underline{\makebox[4.52cm]{\LXAF@value@type}}}
+\hspace{2.53cm}{\xiaosanhao\song 论文类别~~\underline{\makebox[4.52cm]{\LXAF@value@type}}}
 
 \vspace{0.36cm}
 
-\hspace{2.53cm}{\sanhao\kai 年\hspace{1.15cm}级~~\underline{\makebox[4.52cm]{\LXAF@value@grade}}}
+\hspace{2.53cm}{\xiaosanhao\song 年\hspace{1.15cm}级~~\underline{\makebox[4.52cm]{\LXAF@value@grade}}}
 
 \vspace{0.33cm}
 
-\hspace{2.53cm}{\sanhao\kai 专\hspace{1.15cm}业~~\underline{\makebox[4.52cm]{\LXAF@value@major}}}
+\hspace{2.53cm}{\xiaosanhao\song 专\hspace{1.15cm}业~~\underline{\makebox[4.52cm]{\LXAF@value@major}}}
 
 \vspace{0.32cm}
 
-\hspace{2.53cm}{\sanhao\kai 学\hspace{1.15cm}号~~\underline{\makebox[4.52cm]{\LXAF@value@ID}}}
+\hspace{2.53cm}{\xiaosanhao\song 学\hspace{1.15cm}号~~\underline{\makebox[4.52cm]{\LXAF@value@ID}}}
 
 \vspace{2.06cm}
+
 \begin{center}
 {\xiaosanhao\song \today}
 \end{center}
@@ -149,7 +153,7 @@
 	~
 	
 	
-	本人同意上海立信会计学院保留使用学位论文的规定，即：学校有权保留送交论文的复印件，允许论文被查阅和借阅；学校可以上网公布全部内容，可以采用影印、缩印或其他复制手段保存论文。\\
+	本人同意上海立信会计金融学院保留使用学位论文的规定，即：学校有权保留送交论文的复印件，允许论文被查阅和借阅；学校可以上网公布全部内容，可以采用影印、缩印或其他复制手段保存论文。\\
 	
 	论文作者签名\qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad 年\qquad 月\qquad 日
 }
@@ -240,26 +244,31 @@
 \usepackage{microtype}
 %------------------------------------------------------------------------
 %设置目录页。
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{subsubsection}}
+\setcounter{tocdepth}{1}
 \contentsmargin{2.5em}
 \titlecontents{chapter}
 [0ex]
 {\xiaosihao\rm}
-{\contentslabel{2ex}}
-{\hspace*{-2ex}}
+{\zhnumber{\thecontentslabel}、}
+{}
 {\titlerule*[1pc]{.}\contentspage}
 \titlecontents{section}
-[4ex]
+[0ex]
 {\xiaosihao\rm}
-{\contentslabel{4ex}}
-{\hspace*{-2ex}}
+{（\zhnumber{\thecontentslabel}）}
+{}
+%{\hspace*{-1ex}}
 {\titlerule*[1pc]{.}\contentspage}
+\iffalse
 \titlecontents{subsection}
 [6.7ex]
 {\xiaosihao\rm} 
 {\contentslabel{5ex}}
 {\hspace*{-2ex}}
 {\titlerule*[1pc]{.}\contentspage}
-\iffalse
 \titlecontents{subsubsection}
 [10ex]
 {\xiaosihao\rm} 
@@ -270,16 +279,24 @@
 %------------------------------------------------------------------------
 %设置章标题，节标题。
 \titleclass{\chapter}{straight}
-\titleformat{\chapter}{\xiaosanhao\sf\bf}{\xiaosanhao\bf\thechapter.}{0em}{}
+\titleformat{\chapter}{\xiaosanhao\sf\bf}{\xiaosanhao\bf\zhnum{chapter}、}{0em}{}
 \titlespacing{\chapter}{0pt}{14.4pt}{9pt}
-\makeatletter
-\renewcommand\section{\@startsection {section}{1}{\z@}{8.4pt}{8.4pt}{\sihao\sf\bf}}
-\renewcommand\subsection{\@startsection {subsection}{2}{\z@}{7.2pt}{7.2pt}{\xiaosihao\sf\bf}}
-\renewcommand\subsubsection{\@startsection {subsubsection}{3}{\z@}{7.2pt}{7.2pt}{\xiaosihao\sf\bf}}
-\makeatother
+\titleformat{\section}{\sihao\sf\bf}{\sihao\sf\bf （\zhnum{section}）}{0em}{}
+\titlespacing{\section}{0pt}{8.4pt}{8.4pt}
+\titleformat{\subsection}{\xiaosihao\sf\bf}{\xiaosihao\sf\bf \thesubsection .~}{0em}{}
+\titlespacing{\subsection}{0pt}{7.2pt}{7.2pt}
+\titleformat{\subsubsection}{\xiaosihao\sf\bf}{\xiaosihao\sf\bf (\thesubsubsection )}{0em}{}
+\titlespacing{\subsubsection}{0pt}{7.2pt}{7.2pt}
+%\makeatletter
+%\renewcommand\section{\@startsection {section}{1}{\z@}{8.4pt}{8.4pt}{\sihao\sf\bf}}
+%\renewcommand\subsection{\@startsection {subsection}{2}{\z@}{7.2pt}{7.2pt}{\xiaosihao\sf\bf}}
+%\renewcommand\subsubsection{\@startsection {subsubsection}{3}{\z@}{7.2pt}{7.2pt}{\xiaosihao\sf\bf}}
+%\renewcommand{\section}[1]{\section*{（\zhnum{section}）#1}\addcontentsline{toc}{section}{（\zhnum{section}）#1}}
+%\makeatother
+
 %------------------------------------------------------------------------
 %修改为中文
-\renewcommand{\contentsname}{\centerline{目录}}
+\renewcommand{\contentsname}{\centerline{目\quad 录}}
 % 将Contents改为目录
 \renewcommand{\bibname}{\centerline{参考文献}}
 \renewcommand\figurename{\rm\xiaosihao 图}
@@ -291,7 +308,7 @@
 \crefname{table}{表}{}
 \crefname{figure}{图}{}
 \newcommand{\enabstractname}{Abstract}
-\newcommand{\cnabstractname}{摘要}
+\newcommand{\cnabstractname}{摘\quad 要}
 \newenvironment{enabstract}{%
 	\par\xiaosihao
 	\noindent\mbox{}\hfill{\xiaosanhao\sf\bfseries \enabstractname}\hfill\mbox{}\par
@@ -305,8 +322,8 @@
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \lhead{}
-\chead{\xiaowuhao\song 上海立信会计金融学院本科生毕业论文}
-\rhead[]
+\chead{}
+\rhead{\xiaowuhao\song 上海立信会计金融学院普通本科毕业论文（设计）}
 \lfoot{}
 \cfoot{\xiaowuhao\rm\thepage}
 \rfoot{}
