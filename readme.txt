@@ -2,7 +2,7 @@
 使用ctex打开时，要用utf-8格式打开。而且ctex似乎不能编译。请使用本文推荐的环境。
 
 更新日志：
-2018.5.19?lixinthesis-1.6.520 by Effie
+2018.5.19 lixinthesis-1.6.520 by Effie
 1.修改了封面logo。
 2.修改了页眉位置。
 
