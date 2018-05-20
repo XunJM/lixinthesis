@@ -76,16 +76,17 @@
 ~
 \vspace{-0.81cm}
 
-\begin{figure}[H]
-\includegraphics[width=2.52cm]{logo1.jpg}
-\end{figure}
+%\begin{figure}[H]
+%\includegraphics[width=2.52cm]{logo1.jpg}
+%\end{figure}
 \vspace{-0.08cm}
 \begin{center}
-\includegraphics[width=13.55cm]{logo2.jpg}  %12.31 老封面
+%\includegraphics[width=13.55cm]{logo2.jpg}  %12.31 老封面
+\includegraphics[width=13.55cm]{logo3.jpg}
 
-\vspace{0.23cm}
+%\vspace{0.23cm}
 
-{\erhaonew\rm Shanghai Lixin University of Accounting and Finance} %Shanghai Lixin University of Commerce 二号
+%{\erhaonew\rm Shanghai Lixin University of Accounting and Finance} %Shanghai Lixin University of Commerce 二号
 
 \vspace{0.51cm}
 
@@ -114,7 +115,7 @@
 \hspace{2.53cm}{\xiaosanhao\song 论文类别~~\underline{\makebox[4.52cm]{\LXAF@value@type}}}
 
 \vspace{0.36cm}
-
+ 
 \hspace{2.53cm}{\xiaosanhao\song 年\hspace{1.15cm}级~~\underline{\makebox[4.52cm]{\LXAF@value@grade}}}
 
 \vspace{0.33cm}
@@ -322,8 +323,8 @@
 \pagestyle{fancy}
 \setlength{\headheight}{15pt}
 \lhead{}
-\chead{}
-\rhead{\xiaowuhao\song 上海立信会计金融学院普通本科毕业论文（设计）}
+\chead{\xiaowuhao\song 上海立信会计金融学院普通本科毕业论文}
+\rhead{}
 \lfoot{}
 \cfoot{\xiaowuhao\rm\thepage}
 \rfoot{}
